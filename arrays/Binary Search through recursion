@@ -1,0 +1,25 @@
+#include<iostream>
+using namespace std;
+
+int Bsearch(int a,int low,int high,int n){
+ if(low<=high)
+    int mid=(low+high)/2;
+ if(a[mid]==n)
+    return mid;
+ else if(n<a[mid])
+  Bsearch(a,low,mid-1,n);
+  else
+  Bsearch(a,mid+1,high,key);
+}
+
+
+int main()
+{
+    int a[10]={2,6,3,9,5,7,10,14,25,65};
+    int n;
+    cin>>n;
+    int low=0,high=9;
+
+    Bsearch(a,low,high,n);
+    return 0;
+}
