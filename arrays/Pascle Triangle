@@ -1,0 +1,33 @@
+#include<iostream>
+using namespace std;
+
+void printpascal( int n)
+{
+    int pas[5][5];
+    for(int i=0;i<5;i++)
+
+    {
+        for(int c=0;c<4-i;c++)
+                {
+                    cout<<' ';
+                }
+        for(int j=0;j<=i;j++)
+        {
+
+            if(i==j||j==0)
+                pas[i][j]=1;
+            else
+                pas[i][j]=pas[i-1][j-1]+pas[i-1][j];
+
+            cout<<pas[i][j]<<" ";
+        }
+        cout<<endl;
+    }
+}
+
+
+int main()
+{
+ printpascal(5);
+
+}
