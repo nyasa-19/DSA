@@ -1,0 +1,68 @@
+Skip to content
+Search or jump to…
+Pull requests
+Issues
+Codespaces
+Marketplace
+Explore
+ 
+@nyasa-19 
+1118NamanMishra
+/
+Data-Structure
+Public
+Code
+Issues
+Pull requests
+Actions
+Projects
+Security
+Insights
+Data-Structure/Arrays/insert in sorted array
+@1118NamanMishra
+1118NamanMishra Create insert in sorted array
+Latest commit f4a739c 22 hours ago
+ History
+ 1 contributor
+41 lines (33 sloc)  538 Bytes
+
+#include <iostream>
+using namespace std;
+
+
+void insertelement(int a[], int n, int x)
+{
+int i;
+	for ( i = n - 1; i >= 0; i--)
+        if(x<a[i])
+    {
+        a[i + 1] = a[i];
+        a[i]=x;
+    }
+}
+
+int main()
+
+{
+    int a[100];
+     int n;
+     cout<<"enter sie of array"<<endl;
+    cin>>n;
+    for(int i=0;i<n;i++)
+    {
+        cin>>a[i];
+    }
+    int x;
+
+
+     cout<<"enter what to insert"<<endl;
+     cin>>x;
+    insertelement(a,n,x);
+    n++;
+     for( int i=0;i<n;i++)
+     {
+         cout<<a[i]<<" ";
+     }
+      return 0;
+
+}
