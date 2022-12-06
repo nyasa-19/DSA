@@ -1,0 +1,26 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+   int arr[100];
+ int n;
+  cin>>n;
+  for(int i=0; i<n;i++){
+      cin>>arr[i];
+      
+  }
+    int maxindex=arr[0];
+    
+   for( int j=0;j<n;j++)
+  {
+    
+      if( arr[j]>maxindex){
+          maxindex=arr[j];
+      }
+     
+  }
+  cout<<maxindex<<endl; 
+  return 0;
+}
